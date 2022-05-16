@@ -17,6 +17,23 @@
 			"style": {}
 		}
 	],
+	"subPackages": [
+		{
+		  "root": "subpackage",
+		  "pages": [{
+			  "path": "goods_detail/goods_detail",
+			  "style": {
+				"navigationBarTitleText": "商品详情"
+			  }
+		  },
+		{
+			"path": "goods_list/goods_list",
+			"style": {
+				"navigationBarTitleText": "商品列表"
+			}
+		}]
+		}
+	],
 	"tabBar": {
 		"selectedColor": "#C00000",
 		"list": [
