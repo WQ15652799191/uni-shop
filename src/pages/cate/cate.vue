@@ -1,5 +1,6 @@
 <template>
   <view>
+    <my-search @click="gotoSearch"></my-search>
     <view class="scroll-view-container">
       <!-- 左侧的滚动视图区域 -->
       <scroll-view class="left-scroll-view" scroll-y :style="{height: wh + 'px'}">
@@ -24,7 +25,11 @@
   </view>
 </template>
 <script>
+import MySearch from "../../components/my-search/my-search.vue";
 export default {
+    components: {
+        MySearch
+    },
     data() {
         return {
             wh: 0,
@@ -37,7 +42,7 @@ export default {
     onLoad() {
         const sysInfo = uni.getSystemInfoSync()
         // 为 wh 窗口可用高度动态赋值
-        this.wh = sysInfo.windowHeight
+        this.wh = sysInfo.windowHeight - 50
         this.getCateList();
     },
     methods: {
@@ -55,6 +60,11 @@ export default {
         gotoGoodsList(item3) {
             uni.navigateTo({
                 url: "/subpackage/goods_list/goods_list?cid=" + item3.cat_id
+            })
+        },
+        gotoSearch() {
+            uni.navigateTo({
+                url: "/subpackage/search/search"
             })
         }
     }

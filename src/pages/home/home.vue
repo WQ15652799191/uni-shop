@@ -1,5 +1,8 @@
 <template>
   <view>
+    <view class="search-box">
+      <my-search @click="gotoSearch"></my-search>
+    </view>
     <swiper
       class="swiper"
       :indicator-dots="true"
@@ -48,7 +51,11 @@
   </view>
 </template>
 <script>
+import MySearch from '../../components/my-search/my-search.vue';
 export default {
+  components: {
+    MySearch
+  },
   data() {
     return {
       swiperList: [],
@@ -93,6 +100,11 @@ export default {
                 url: '/pages/cate/cate'
             })
         }
+    },
+    gotoSearch() {
+      uni.navigateTo({
+          url: "/subpackage/search/search"
+      })
     }
   },
 };
@@ -128,5 +140,10 @@ swiper {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+}
+.search-box {
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
 </style>
