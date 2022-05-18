@@ -26,7 +26,7 @@
 </template>
 <script>
 import MySearch from "../../components/my-search/my-search.vue";
-import badgeMix from '@/mixins/tabbar-badge.js'
+import badgeMix from '../../mixins/tabbar-badge'
 export default {
     components: {
         MySearch

@@ -5,6 +5,7 @@
 	"versionName": "1.0.0",
 	"versionCode": "100",
 	"transformPx": false,
+	"nvueStyleCompiler" : "uni-app",
 	"app-plus": {
 		"usingComponents": true,
 		"splashscreen": {
