@@ -52,10 +52,13 @@
 </template>
 <script>
 import MySearch from '../../components/my-search/my-search.vue';
+import badgeMix from '@/mixins/tabbar-badge.js'
 export default {
   components: {
     MySearch
   },
+  // 将 badgeMix 混入到当前的页面中进行使用
+  mixins: [badgeMix],
   data() {
     return {
       swiperList: [],
